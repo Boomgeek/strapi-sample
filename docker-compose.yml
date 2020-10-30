@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  server:
+    container_name: strapi-sample
+    restart: unless-stopped
+    build:
+      context: .
+      args:
+        - BUILD_MODE=production
+    ports:
+      - '8080:8080'
